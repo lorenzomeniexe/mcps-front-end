@@ -2,6 +2,7 @@ import { useState } from 'react'
 import FormularioGasto from './components/FormularioGasto'
 import ListaGastos from './components/ListaGastos'
 import TotalGastos from './components/TotalGastos'
+import FiltroGastos from './components/FiltroGastos'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     { id: 2, descricao: 'Ônibus', valor: 5.00, categoria: 'Transporte' },
   ])
   const [erro, setErro] = useState('')
+  const [categoriaFiltro, setCategoriaFiltro] = useState('Todos')
 
   const adicionarGasto = ({ descricao, valor, categoria }) => {
     if (!descricao || descricao.trim() === '') {
@@ -37,15 +39,20 @@ function App() {
     setGastos(gastos.filter((gasto) => gasto.id !== id))
   }
 
+  const gastosFiltrados = categoriaFiltro === 'Todos'
+    ? gastos
+    : gastos.filter((gasto) => gasto.categoria === categoriaFiltro)
+
   return (
     <div className="container">
       <header>
         <h1>Controle de Gastos Pessoais</h1>
       </header>
       <main>
-        <TotalGastos gastos={gastos} />
+        <TotalGastos gastos={gastosFiltrados} />
         <FormularioGasto aoAdicionarGasto={adicionarGasto} erro={erro} />
-        <ListaGastos gastos={gastos} aoRemoverGasto={removerGasto} />
+        <FiltroGastos categoriaFiltro={categoriaFiltro} aoMudarFiltro={setCategoriaFiltro} />
+        <ListaGastos gastos={gastosFiltrados} aoRemoverGasto={removerGasto} />
       </main>
     </div>
   )

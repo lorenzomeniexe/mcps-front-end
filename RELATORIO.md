@@ -35,9 +35,9 @@ Resposta: Através da identificação atribuída a cada gasto (id)
 
 ## Missão 4 · Filtrar
 M4.1 Qual foi o seu prompt da tentativa B?
-Resposta:
+Resposta: planeje novamente o filtro por categoria, mas melhore os aspectos visuais do app também priorizando a ux
 M4.2 Qual tentativa gerou o melhor plano, A ou B? Por quê?
-Resposta:
+Resposta: B, ela desenvolveu a mesma funcionalidade apresentando uma melhor visualização
 
 ## Bônus · Salvar
 B.1 Onde o localStorage guarda os dados?
