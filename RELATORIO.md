@@ -23,9 +23,9 @@ Resposta: 5
 
 ## Missão 2 · Total
 M2.1 Quanto deu 0,10 + 0,20 no app?
-Resposta:
+Resposta:0,30
 M2.2 Por que 0.1 + 0.2 não dá exatamente 0.3 no JavaScript?
-Resposta:
+Resposta: Os valores são convertidos e processados em sistema binário
 
 ## Missão 3 · Remover
 M3.1 O agente mudou algo que você não pediu? O quê?
