@@ -1,4 +1,4 @@
-export default function ListaGastos({ gastos }) {
+export default function ListaGastos({ gastos, aoRemoverGasto }) {
   return (
     <section className="lista-gastos">
       <h2>Gastos Registrados</h2>
@@ -13,6 +13,13 @@ export default function ListaGastos({ gastos }) {
               <span className="gasto-valor">
                 R$ {gasto.valor.toFixed(2).replace('.', ',')}
               </span>
+              <button
+                type="button"
+                className="botao-remover"
+                onClick={() => aoRemoverGasto(gasto.id)}
+              >
+                Remover
+              </button>
             </li>
           ))}
         </ul>

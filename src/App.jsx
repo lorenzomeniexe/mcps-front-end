@@ -33,6 +33,10 @@ function App() {
     setGastos([novoGasto, ...gastos])
   }
 
+  const removerGasto = (id) => {
+    setGastos(gastos.filter((gasto) => gasto.id !== id))
+  }
+
   return (
     <div className="container">
       <header>
@@ -41,7 +45,7 @@ function App() {
       <main>
         <TotalGastos gastos={gastos} />
         <FormularioGasto aoAdicionarGasto={adicionarGasto} erro={erro} />
-        <ListaGastos gastos={gastos} />
+        <ListaGastos gastos={gastos} aoRemoverGasto={removerGasto} />
       </main>
     </div>
   )

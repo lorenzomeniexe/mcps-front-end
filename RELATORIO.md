@@ -29,9 +29,9 @@ Resposta: Os valores são convertidos e processados em sistema binário
 
 ## Missão 3 · Remover
 M3.1 O agente mudou algo que você não pediu? O quê?
-Resposta:
+Resposta: Não
 M3.2 Como o código sabe qual gasto remover?
-Resposta:
+Resposta: Através da identificação atribuída a cada gasto (id)
 
 ## Missão 4 · Filtrar
 M4.1 Qual foi o seu prompt da tentativa B?
