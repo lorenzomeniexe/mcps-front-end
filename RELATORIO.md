@@ -41,9 +41,13 @@ Resposta: B, ela desenvolveu a mesma funcionalidade apresentando uma melhor visu
 
 ## Bônus · Salvar
 B.1 Onde o localStorage guarda os dados?
-Resposta:
+Resposta: Os dados do localStorage ficam salvos em arquivos de banco de dados internos (geralmente usando SQLite ou arquivos LevelDB) na pasta de perfil do próprio navegador instalada no seu sistema operacional Windows. 
+Por exemplo, no Windows:
+- Google Chrome / Edge: Ficam em pastas como C:\Users\Lenovo\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb (ou equivalente no Edge).
+- Firefox: Ficam na pasta do perfil em AppData\Roaming\Mozilla\Firefox\Profiles\...\storage\default.
 B.2 Por que os gastos não aparecem em outro navegador?
-Resposta:
+Resposta: o localStorage não é compartilhado entre navegadores diferentes (como do Google Chrome para o Firefox ou Edge) nem entre perfis diferentes do mesmo navegador. 
+Cada navegador gerencia o seu próprio armazenamento isolado por motivos de segurança e privacidade (sandbox). 
 
 ## Reflexão final
 R.1 Sem olhar o código, explique como um dos seus componentes recebe e altera os gastos.

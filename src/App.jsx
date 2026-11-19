@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import FormularioGasto from './components/FormularioGasto'
 import ListaGastos from './components/ListaGastos'
 import TotalGastos from './components/TotalGastos'
@@ -6,12 +6,27 @@ import FiltroGastos from './components/FiltroGastos'
 import './App.css'
 
 function App() {
-  const [gastos, setGastos] = useState([
-    { id: 1, descricao: 'Almoço', valor: 35.50, categoria: 'Alimentação' },
-    { id: 2, descricao: 'Ônibus', valor: 5.00, categoria: 'Transporte' },
-  ])
+  const [gastos, setGastos] = useState(() => {
+    const gastosSalvos = localStorage.getItem('gastos_pessoais')
+    if (gastosSalvos) {
+      try {
+        return JSON.parse(gastosSalvos)
+      } catch (e) {
+        console.error('Erro ao ler dados do localStorage', e)
+      }
+    }
+    return [
+      { id: 1, descricao: 'Almoço', valor: 35.50, categoria: 'Alimentação' },
+      { id: 2, descricao: 'Ônibus', valor: 5.00, categoria: 'Transporte' },
+    ]
+  })
+
   const [erro, setErro] = useState('')
   const [categoriaFiltro, setCategoriaFiltro] = useState('Todos')
+
+  useEffect(() => {
+    localStorage.setItem('gastos_pessoais', JSON.stringify(gastos))
+  }, [gastos])
 
   const adicionarGasto = ({ descricao, valor, categoria }) => {
     if (!descricao || descricao.trim() === '') {
