@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/spec/v1.0.json",
+  "name": "Controle de Gastos",
+  "description": "Aplicativo de controle de gastos pessoais",
+  "resources": [
+    {
+      "url": "http://localhost:5173/",
+      "description": "App home page",
+      "type": "website"
+    }
+  ]
+}

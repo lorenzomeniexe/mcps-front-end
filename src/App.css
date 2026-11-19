@@ -93,7 +93,7 @@ section h2 {
 
 .formulario-gasto button[type="submit"] {
   width: 100%;
-  background-color: #059669;
+  background-color: #046c4e;
   color: white;
   border: none;
   padding: 12px;
@@ -167,6 +167,7 @@ section h2 {
 
 .gasto-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: white;
@@ -174,7 +175,22 @@ section h2 {
   border-radius: 6px;
   border: 1px solid #e2e8f0;
   margin-bottom: 8px;
+  gap: 8px;
   transition: box-shadow 0.2s;
+}
+
+.gasto-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+
+.gasto-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .gasto-item:hover {
@@ -189,8 +205,8 @@ section h2 {
 
 .gasto-categoria {
   font-size: 0.85rem;
-  color: #64748b;
-  background-color: #f1f5f9;
+  color: #334155;
+  background-color: #e2e8f0;
   padding: 3px 8px;
   border-radius: 4px;
   margin-right: 12px;
@@ -198,7 +214,7 @@ section h2 {
 
 .gasto-valor {
   font-weight: 700;
-  color: #059669;
+  color: #046c4e;
   margin-right: 12px;
 }
 

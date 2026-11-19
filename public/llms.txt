@@ -1,0 +1,6 @@
+# Controle de Gastos
+
+Aplicativo de controle de gastos pessoais em React + Vite para gerenciamento de despesas.
+
+## Links
+- [Home](http://localhost:5173/)
